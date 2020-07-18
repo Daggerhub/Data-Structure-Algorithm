@@ -1,23 +1,19 @@
-#include<iostream>
-#include<queue>
+#include<bits/stdc++.h>
 using namespace std;
-
 int main(){
 
 	priority_queue<int> leftheap; //maxHeap
 	priority_queue<int,vector<int>,greater< int > > rightheap; //minHeap
 
-    int d;
+	int t;
+	cin>>t;
+	while(t--){
+
+	
+    int d,n,med;
+    cin>>n;
     cin>> d;
-    leftheap.push(d);
-
-    float med =d;
-    cout<<"Median"<<med<<" ";
-
-    cin>>d;
-
-    //Inserting the values
-    while(d!=-1){
+    while(n--){
 
     	if(leftheap.size()>rightheap.size()){
 
@@ -56,12 +52,15 @@ int main(){
     	}
 
 
-    	cout<<"Med" <<med <<endl;
+    	cout<<med <<endl;
     	cin >> d;
     	
     }
-    return 0;
+
+
+
+
+	}
+
 
 }
-
-
