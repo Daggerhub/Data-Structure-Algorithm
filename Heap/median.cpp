@@ -2,19 +2,20 @@
 using namespace std;
 int main(){
 
-	priority_queue<int> leftheap; //maxHeap
-	priority_queue<int,vector<int>,greater< int > > rightheap; //minHeap
+
 
 	int t;
 	cin>>t;
 	while(t--){
-
+        priority_queue<int> leftheap; //maxHeap
+    priority_queue<int,vector<int>,greater< int > > rightheap; //minHeap
 	
-    int d,n,med;
+    int n;
+    float d,med;
     cin>>n;
-    cin>> d;
-    while(n--){
 
+    while(n--){
+        cin >> d;
     	if(leftheap.size()>rightheap.size()){
 
     		if(d<med){
@@ -51,16 +52,13 @@ int main(){
     		med = ((leftheap.top() + rightheap.top())/2.0);
     	}
 
+        cout<<med <<" ";
 
-    	cout<<med <<endl;
-    	cin >> d;
-    	
+    }
+    cout<<endl;
+	
     }
 
-
-
-
-	}
 
 
 }
