@@ -2,9 +2,6 @@
 #include<stack>
 #include<string>
 using namespace std;
-// Function to check whether two characters are opening 
-// and closing of same type. 
-
 
 
 bool ArePair(char opening,char closing)
