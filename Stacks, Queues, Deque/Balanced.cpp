@@ -40,9 +40,9 @@ bool Balanced(string exp)
 
 int main()
 {
-	/*Code to test the function AreParanthesesBalanced*/
+
 	string expression;
-	cout<<"Enter an expression:  "; // input expression from STDIN/Console
+	cout<<"Enter an expression:  "; 
 	cin>>expression;
 	if(Balanced(expression))
 		cout<<"Yes\n";
