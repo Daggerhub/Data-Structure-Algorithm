@@ -8,7 +8,7 @@ void printSpan(int arr[], int n)
 	for(int day=0;day<n;++day)
 	{
 		int curPrice = arr[day];
-		while(s.empty() == false && arr[s.top()]<curPrice)   //for day=0 1st time the stack is empty.....2nd time arr[0]=100>arr[1]....3rd time arr[1]=80>arr[2].....4th time arr[2]=60<arr[3]      
+		while(s.empty() == false && arr[s.top()]<=curPrice)   //for day=0 1st time the stack is empty.....2nd time arr[0]=100>arr[1]....3rd time arr[1]=80>arr[2].....4th time arr[2]=60<arr[3]      
 		{
 			s.pop();                                        // false..........................................false...................false........................true & s{0,1}
 		}
