@@ -20,6 +20,8 @@ public:
     bool isBST;
     int min;
     int max;
+    int hoot;
+    int size;
 };
 
 node* buildTree(){
@@ -54,12 +56,27 @@ istree* isBST(node* n){
     mp->min = min(n->data, min(lp->min,rp->min));
     mp->max = max(n->data, max(lp->max,rp->max));
     return mp;
+
+    if(isBST){
+        mp->hoot = n;
+        mp->size = lp->size + rp->size + 1;
+    }
+
+    else if(lp->size > rp->size){
+        mp->hoot = lp->hoot;
+        mp->size = lp->size;
+    }
+    else{
+        mp->hoot = rp->hoot;
+        mp->size = rp->size;
+    }
+
 }
 
 int main(){ 
     node* root = buildTree();
-    istree * bp = isBST(root);
-    cout<<bp->min;
+    istree * p = isBST(root);
+    cout<<p->min;
     return 0;
 }
  
