@@ -16,7 +16,7 @@ int main(){
     for(int i = 0 ; i < m ; i++) cin>>arr2[i];
 
     unordered_map<int,int> count;
-    vector<int> a;
+    // vector<int> a;
 
     for (int i = 0; i < n ; i++) {
             if (count.find(arr[i]) == count.end()) {
